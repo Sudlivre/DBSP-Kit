@@ -3,6 +3,9 @@ import { View, Button, Text } from '@tarojs/components'
 import { connect } from '@tarojs/redux'
 
 import { add, minus, asyncAdd } from '../../actions/counter'
+import Head from '../../components/OrderGoods/Head'
+import Good from '../../components/OrderGoods/Good'
+import Bottom from '../../components/OrderGoods/bottom'
 
 import './index.scss'
 
@@ -39,11 +42,14 @@ class Index extends Component {
   render () {
     return (
       <View className='index'>
-        <Button className='add_btn' onClick={this.props.add}>+</Button>
+        {/* <Button className='add_btn' onClick={this.props.add}>+</Button>
         <Button className='dec_btn' onClick={this.props.dec}>-</Button>
         <Button className='dec_btn' onClick={this.props.asyncAdd}>async</Button>
         <View><Text>{this.props.counter.num}</Text></View>
-        <View><Text>Hello, World</Text></View>
+        <View><Text>Hello, World</Text></View> */}
+        <Head />
+        <Good />
+        <Bottom />
       </View>
     )
   }
